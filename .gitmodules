@@ -1,0 +1,15 @@
+[submodule "hackaton-dashboard"]
+	path = hackaton-dashboard
+	url = https://github.com/koharudin/hackaton-dashboard.git
+[submodule "hackaton-rin"]
+	path = hackaton-rin
+	url = https://github.com/koharudin/hackaton-rin.git
+[submodule "hackaton-simarin"]
+	path = hackaton-simarin
+	url = https://github.com/koharudin/hackaton-simarin.git
+[submodule "hackaton-siap"]
+	path = hackaton-siap
+	url = https://github.com/koharudin/hackaton-siap.git
+[submodule "hackaton-minio"]
+	path = hackaton-minio
+	url = https://github.com/koharudin/hackaton-minio.git
