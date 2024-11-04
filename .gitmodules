@@ -7,11 +7,12 @@
 [submodule "hackaton-simarin"]
 	path = hackaton-simarin
 	url = https://github.com/koharudin/hackaton-simarin.git
-[submodule "hackaton-siap"]
-	path = hackaton-siap
-	url = https://github.com/koharudin/hackaton-siap.git
+
 [submodule "hackaton-minio"]
 	path = hackaton-minio
 	url = https://github.com/koharudin/hackaton-minio.git
 [submodule "hackaton-kehadiran"]
 	url = https://github.com/koharudin/hackaton-kehadiran.git
+[submodule "hackaton-siap"]
+	path = hackaton-siap
+	url = https://github.com/koharudin/hackaton-siap.git
