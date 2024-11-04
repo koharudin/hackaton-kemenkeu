@@ -1,5 +1,17 @@
-version: '3.7'
 services:
+  minio:
+    image: quay.io/minio/minio 
+    command: server /data --console-address ":9001"
+    ports:
+      - '9000:9000'
+      - '9001:9001'
+    networks:
+      - keycloak_network
+    volumes:
+      - ./data/minio_data:/data
+    environment:
+      - MINIO_ROOT_USER=${MINIO_ROOT_USER}
+      - MINIO_ROOT_PASSWORD=${MINIO_ROOT_PASSWORD}
   postgres:
     image: postgres:16.2
     ports:
@@ -12,7 +24,32 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     networks:
       - keycloak_network
- 
+  rin:
+    build:
+      context: hackaton-rin
+      dockerfile: Dockerfile
+    ports:
+      - 82:3000
+    volumes:
+      - ./hackaton-rin:/app
+    environment:
+      - NODE_ENV=development 
+      - WATCHPACK_POLLING=true
+    networks:
+      - keycloak_network
+  siap:
+    build:
+      context: hackaton-siap
+      dockerfile: Dockerfile
+    ports:
+      - 81:3000
+    volumes:
+      - ./hackaton-siap:/app
+    environment:
+      - NODE_ENV=development 
+      - WATCHPACK_POLLING=true
+    networks:
+      - keycloak_network
 networks:
   keycloak_network:
     driver: bridge
