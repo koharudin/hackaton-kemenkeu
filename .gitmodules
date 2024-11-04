@@ -13,6 +13,7 @@
 	url = https://github.com/koharudin/hackaton-minio.git
 [submodule "hackaton-kehadiran"]
 	url = https://github.com/koharudin/hackaton-kehadiran.git
+	path = hackaton-kehadiran
 [submodule "hackaton-siap"]
 	path = hackaton-siap
 	url = https://github.com/koharudin/hackaton-siap.git
